@@ -10,6 +10,9 @@ const dateData = reactive<DateDataType>({
   dateWeek: "",
   timing:null
 });
+// 获取当前时间
+const date = new Date();
+dateData.dateYear = dayjs().format("YYYY");
 
 const { setSettingShow} =useSettingStore()
 const weekday= ["周日", "周一", "周二", "周三", "周四", "周五", "周六"]
