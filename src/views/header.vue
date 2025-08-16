@@ -13,6 +13,10 @@ const dateData = reactive<DateDataType>({
 // 获取当前时间
 const date = new Date();
 dateData.dateYear = dayjs().format("YYYY");
+dateData.dateDay = dayjs().format("YYYY-MM-DD hh : mm : ss");
+dateData.dateWeek = dayjs().format("dddd");
+// 设置全局状态
+
 
 const { setSettingShow} =useSettingStore()
 const weekday= ["周日", "周一", "周二", "周三", "周四", "周五", "周六"]
